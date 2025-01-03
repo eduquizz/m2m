@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mm2:Questionnaire xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mm2="http://www.example.org/mm2">
+  <page xsi:type="mm2:PageQuestion" titre="Questionnaire en cours" question="//@page.1/@question.0"/>
+  <page xsi:type="mm2:PageSoumission" titre="Soumission de vos r&#xe9;ponses">
+    <question ennonce="Comment manger la tomate ?" difficulte="5">
+      <reponse texte="Cuite" estVraie="true"/>
+      <reponse texte="Crue" estVraie="true"/>
+      <reponse texte="Glac&#xe9;e"/>
+      <etiquette nom="Tomate"/>
+      <etiquette nom="Manger"/>
+    </question>
+  </page>
+  <page xsi:type="mm2:PageResultat" titre="R&#xe9;sultats du questionnaire"/>
+</mm2:Questionnaire>

@@ -1,0 +1,10 @@
+Questionnaire "Fruits et légumes"
+RetourAutorisé true
+Mélanger false
+
+Question "Comment manger la tomate ?"
+Difficulté 5
+Etiquettes "Tomate", "Manger"
+[x] "Cuite"
+[x] "Crue"
+[ ] "Glacée"
