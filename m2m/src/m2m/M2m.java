@@ -43,6 +43,7 @@ public class M2m {
 		mm2.Questionnaire questionnaireMm2 = mm2.Mm2Factory.eINSTANCE.createQuestionnaire();
 		List<mm2.Question> questionsMm2 = new ArrayList<>();
 		List<mm2.Etiquette> etiquettesMm2 = new ArrayList<>();
+		List<mm2.Page> pagesMm2 = new ArrayList<>();
 		
 		// Création des questions
 		for (mm1.Question questionMm1 : questionnaireMm1.getQuestion()) {
@@ -83,13 +84,16 @@ public class M2m {
 			// Si il s'agit de la première question, on ne fait rien
 			// Sinon, on met la page suivante de la question précédente à la page de la question actuelle
 			if (!questionMm2.equals(questionsMm2.getFirst())) {
-				((mm2.PageQuestion) questionnaireMm2.getPage().getLast()).setPageSuivante(pageQuestionMm2);
 				if (questionnaireMm1.isRetourAutorise()) {
-					pageQuestionMm2.setPagePrecedente(questionnaireMm2.getPage().getLast());
+					pageQuestionMm2.setBoutonRetour(mm2.Mm2Factory.eINSTANCE.createBoutonRetour());
+					pageQuestionMm2.setPagePrecedente(pagesMm2.getLast());
 				}
+				((mm2.PageQuestion) pagesMm2.getLast()).setPageSuivante(pageQuestionMm2);
 			}
-			questionnaireMm2.getPage().add(pageQuestionMm2);
+			pageQuestionMm2.setBoutonSuivant(mm2.Mm2Factory.eINSTANCE.createBoutonSuivant());
+			pagesMm2.add(pageQuestionMm2);
 		}
+		questionnaireMm2.getPage().addAll(pagesMm2);
 		
 		// Création de la page de résultat
 		mm2.PageResultat pageResultatMm2 = mm2.Mm2Factory.eINSTANCE.createPageResultat();
@@ -99,8 +103,10 @@ public class M2m {
 		mm2.PageSoumission pageSoumissionMm2 = mm2.Mm2Factory.eINSTANCE.createPageSoumission();
 		pageSoumissionMm2.setTitre("Soumission de vos réponses");
 		pageSoumissionMm2.getQuestion().addAll(questionsMm2);
+		pageSoumissionMm2.setBoutonSoumettre(mm2.Mm2Factory.eINSTANCE.createBoutonSoumettre());
 		pageSoumissionMm2.setPageSuivante(pageResultatMm2);
 		if (questionnaireMm1.isRetourAutorise()) {
+			pageSoumissionMm2.setBoutonRetour(mm2.Mm2Factory.eINSTANCE.createBoutonRetour());
 			pageSoumissionMm2.setPagePrecedente(questionnaireMm2.getPage().getLast());
 		}
 		((mm2.PageQuestion) questionnaireMm2.getPage().getLast()).setPageSuivante(pageSoumissionMm2); // La page suivante de la dernière question est la page de soumission
