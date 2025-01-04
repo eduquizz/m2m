@@ -1,13 +1,62 @@
 <?xml version="1.0" encoding="ASCII"?>
 <mm2:Questionnaire xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mm2="http://www.example.org/mm2">
-  <page xsi:type="mm2:PageQuestion" titre="Questionnaire en cours" question="//@page.1/@question.0"/>
-  <page xsi:type="mm2:PageSoumission" titre="Soumission de vos r&#xe9;ponses">
-    <question ennonce="Comment manger la tomate ?" difficulte="5">
+  <page xsi:type="mm2:PageQuestion" pageSuivante="//@page.1" titre="Questionnaire en cours" question="//@page.7/@question.0"/>
+  <page xsi:type="mm2:PageQuestion" pageSuivante="//@page.2" pagePrecedente="//@page.0" titre="Questionnaire en cours" question="//@page.7/@question.1"/>
+  <page xsi:type="mm2:PageQuestion" pageSuivante="//@page.3" pagePrecedente="//@page.1" titre="Questionnaire en cours" question="//@page.7/@question.2"/>
+  <page xsi:type="mm2:PageQuestion" pageSuivante="//@page.4" pagePrecedente="//@page.2" titre="Questionnaire en cours" question="//@page.7/@question.3"/>
+  <page xsi:type="mm2:PageQuestion" pageSuivante="//@page.5" pagePrecedente="//@page.3" titre="Questionnaire en cours" question="//@page.7/@question.4"/>
+  <page xsi:type="mm2:PageQuestion" pageSuivante="//@page.6" pagePrecedente="//@page.4" titre="Questionnaire en cours" question="//@page.7/@question.5"/>
+  <page xsi:type="mm2:PageQuestion" pageSuivante="//@page.7" pagePrecedente="//@page.5" titre="Questionnaire en cours" question="//@page.7/@question.6"/>
+  <page xsi:type="mm2:PageSoumission" pageSuivante="//@page.8" pagePrecedente="//@page.6" titre="Soumission de vos r&#xe9;ponses">
+    <question ennonce="Comment manger la tomate ?" difficulte="5" reponsesMultiples="true">
       <reponse texte="Cuite" estVraie="true"/>
       <reponse texte="Crue" estVraie="true"/>
       <reponse texte="Glac&#xe9;e"/>
       <etiquette nom="Tomate"/>
       <etiquette nom="Manger"/>
+    </question>
+    <question ennonce="Quel fruit est connu pour son acidit&#xe9; ?" difficulte="4">
+      <reponse texte="Citron" estVraie="true"/>
+      <reponse texte="Banane"/>
+      <reponse texte="Pomme de terre"/>
+      <reponse texte="Groseille"/>
+      <etiquette nom="Acidit&#xe9;"/>
+    </question>
+    <question ennonce="Quels l&#xe9;gumes sont verts ?" difficulte="3" reponsesMultiples="true">
+      <reponse texte="Brocoli" estVraie="true"/>
+      <reponse texte="&#xc9;pinard" estVraie="true"/>
+      <reponse texte="Carotte"/>
+      <reponse texte="Haricot vert" estVraie="true"/>
+    </question>
+    <question ennonce="Quel fruit est souvent utilis&#xe9; pour faire du vin ?" difficulte="4">
+      <reponse texte="Pomme"/>
+      <reponse texte="Raisin" estVraie="true"/>
+      <reponse texte="Cerise"/>
+      <reponse texte="Ananas"/>
+      <etiquette nom="Vin"/>
+    </question>
+    <question ennonce="Quels fruits sont riches en vitamine C ?" difficulte="4" reponsesMultiples="true">
+      <reponse texte="Orange" estVraie="true"/>
+      <reponse texte="Kiwi" estVraie="true"/>
+      <reponse texte="Past&#xe8;que"/>
+      <reponse texte="Fraise" estVraie="true"/>
+      <etiquette nom="Vitamines"/>
+    </question>
+    <question ennonce="Quel l&#xe9;gume est orange ?" difficulte="2">
+      <reponse texte="Brocoli"/>
+      <reponse texte="Carotte" estVraie="true"/>
+      <reponse texte="&#xc9;pinard"/>
+      <reponse texte="Haricot vert"/>
+      <etiquette nom="Couleurs"/>
+      <etiquette nom="L&#xe9;gumes"/>
+    </question>
+    <question ennonce="Quelle est une baie comestible ?" difficulte="3">
+      <reponse texte="Pomme de terre"/>
+      <reponse texte="Navet"/>
+      <reponse texte="Radis"/>
+      <reponse texte="Myrtille" estVraie="true"/>
+      <etiquette nom="Fruits"/>
+      <etiquette nom="Baies"/>
     </question>
   </page>
   <page xsi:type="mm2:PageResultat" titre="R&#xe9;sultats du questionnaire"/>

@@ -3,8 +3,59 @@ RetourAutorisé true
 Mélanger false
 
 Question "Comment manger la tomate ?"
+RéponsesMultiples
 Difficulté 5
 Etiquettes "Tomate", "Manger"
 [x] "Cuite"
 [x] "Crue"
 [ ] "Glacée"
+
+Question "Quel fruit est connu pour son acidité ?"
+Difficulté 4
+Etiquettes "Acidité", "Fruits"
+[x] "Citron"
+[ ] "Banane"
+[ ] "Pomme de terre"
+[ ] "Groseille"
+
+Question "Quels légumes sont verts ?"
+RéponsesMultiples
+Difficulté 3
+Etiquettes "Couleurs", "Légumes"
+[x] "Brocoli"
+[x] "Épinard"
+[ ] "Carotte"
+[x] "Haricot vert"
+
+Question "Quel fruit est souvent utilisé pour faire du vin ?"
+Difficulté 4
+Etiquettes "Vin", "Fruits"
+[ ] "Pomme"
+[x] "Raisin"
+[ ] "Cerise"
+[ ] "Ananas"
+
+Question "Quels fruits sont riches en vitamine C ?"
+RéponsesMultiples
+Difficulté 4
+Etiquettes "Vitamines", "Fruits"
+[x] "Orange"
+[x] "Kiwi"
+[ ] "Pastèque"
+[x] "Fraise"
+
+Question "Quel légume est orange ?"
+Difficulté 2
+Etiquettes "Couleurs", "Légumes"
+[ ] "Brocoli"
+[x] "Carotte"
+[ ] "Épinard"
+[ ] "Haricot vert"
+
+Question "Quelle est une baie comestible ?"
+Difficulté 3
+Etiquettes "Fruits", "Baies"
+[ ] "Pomme de terre"
+[ ] "Navet"
+[ ] "Radis"
+[x] "Myrtille"
