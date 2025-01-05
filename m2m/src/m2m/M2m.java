@@ -45,6 +45,9 @@ public class M2m {
 		List<mm2.Etiquette> etiquettesMm2 = new ArrayList<>();
 		List<mm2.Page> pagesMm2 = new ArrayList<>();
 		
+		// Nom du questionnaire
+		questionnaireMm2.setNom(questionnaireMm1.getNom());
+		
 		// Création des questions
 		for (mm1.Question questionMm1 : questionnaireMm1.getQuestion()) {
 			mm2.Question questionMm2 = mm2.Mm2Factory.eINSTANCE.createQuestion();
